@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <script>
+    window.onload = function(){
+      const link = document.querySelector('a');
+      let count =0;
+      link.onmouseover = function(){
+        if(count==0)
+        {
+          link.style.background = 'red';
+
+        }
+        else if(count==1)
+        {
+          link.style.background = 'red';
+
+        }
+        else if(count==2)
+        {
+          link.style.background = 'blue';
+
+        }
+        else if(count==3){
+          link.style.background = 'gray';
+
+        }
+        else{
+          link.style.background = 'white';
+        }
+        count++;
+      }
+
+    }
+  </script>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

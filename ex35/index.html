@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <script>
+    window.onload = function(){
+        const first = document.querySelector('#firstButton');
+        let link = document.querySelector('a');
+   //     const second = document.getElementById("secondButton");
+        function greeting(){
+            alert("Hello You");
+            const second = document.getElementById("secondButton");
+            second.onclick = function(){
+                first.removeEventListener('click',greeting);
+            }
+        }
+        first.addEventListener('click', greeting);
+        link.addEventListener('click', function(event) {
+        event.preventDefault();  // by calling preventDefault the event is not going to trigger the default behaivour
+        console.log("This link doesn't send us to a differen page as we're preventing the default behaviour");
+});
+
+    }
+  
+</script>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

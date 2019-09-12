@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let isAdding;
+
+        let input1;
+
+
+
+        let result=0;
+
+        let numberInput=0;
+
+        let average =0;
+
+        alert('This program adds all the numbers you input');
+
+        isAdding = confirm('you want to input another number');
+
+        if(isAdding== true)
+
+        {
+
+        while(isAdding==true){
+
+            input1 = parseInt(prompt("input number"));
+
+            numberInput++;
+
+            
+
+            result = result + input1;
+
+            alert(`result is ${result}`);
+
+            isAdding = confirm('you want to input another number');
+
+            
+
+        }
+
+        average = result/numberInput;
+
+        alert(`The final result is ${result} \n The user input ${numberInput} \n The average is: ${average}`);
+
+        }       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

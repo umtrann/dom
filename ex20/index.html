@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Elements</title>
+  <style>
+    .red {
+      color: red;
+    }
+    
+    .green {
+      color: green;
+    }
+    
+    .orange {
+      color: orange;
+    }
+  </style>
+
+  <script>
+      window.onload = function(){
+          const parents = document.querySelector('ul');
+          const children = parents.children;
+          console.log(children);
+          const secondChild = children[1];
+          secondChild.classList.add('green');
+          const fourChild = children[3];
+          fourChild.classList.add('red');
+          const list  = document.querySelector('li');
+          const parentsList = list.parentElement;
+          parentsList.classList.add('orange');
+          console.log(parentsList);
+      }
+  </script>
+</head>
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+</body>
+</html>
